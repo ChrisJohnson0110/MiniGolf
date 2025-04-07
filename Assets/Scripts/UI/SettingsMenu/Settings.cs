@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Settings
 {
-    float volume;
-    GraphicsQuality graphics;
+    public float volume;
+    public GraphicsQuality graphics;
 
 
 
 
 
-    enum GraphicsQuality 
+    public enum GraphicsQuality 
     { 
         Low,
         Medium,
