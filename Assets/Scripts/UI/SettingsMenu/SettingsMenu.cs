@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public Settings GameSettings = new Settings();
+    public GameSettings gameSettings = new GameSettings();
+    public PlayerSettings playerSettings = new PlayerSettings();
 
     //UI elements reference
 
@@ -14,28 +16,45 @@ public class SettingsMenu : MonoBehaviour
 
     //Graphics
 
+    //Player
+    [SerializeField] private TMP_InputField playerNameInput;
 
-    //Audio
+    #region Audio
 
     public void VolumeSlider()
     {
-        GameSettings.volume = volumeSlider.value;
+        gameSettings.volume = volumeSlider.value;
     }
 
-    //Graphics
+    #endregion
+
+    #region Graphics
 
     public void GraphicsLow()
     {
-        GameSettings.graphics = Settings.GraphicsQuality.Low;
+        gameSettings.graphics = GameSettings.GraphicsQuality.Low;
     }
 
     public void GraphicsMedium()
     {
-        GameSettings.graphics = Settings.GraphicsQuality.Medium;
+        gameSettings.graphics = GameSettings.GraphicsQuality.Medium;
     }
 
     public void GraphicsHigh()
     {
-        GameSettings.graphics = Settings.GraphicsQuality.High;
+        gameSettings.graphics = GameSettings.GraphicsQuality.High;
     }
+
+    #endregion
+
+    #region Player
+
+    public void SetPlayerName()
+    {
+        playerSettings.playerName = playerNameInput.text;
+    }
+
+    #endregion
+
+
 }

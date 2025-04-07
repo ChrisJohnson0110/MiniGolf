@@ -6,6 +6,6 @@ public class SyncAudioSource : MonoBehaviour
 {
     private void Awake()
     {
-        gameObject.GetComponent<AudioSource>().volume = GameObject.FindObjectOfType<SettingsMenu>().GameSettings.volume;
+        gameObject.GetComponent<AudioSource>().volume = GameObject.FindObjectOfType<SettingsMenu>().gameSettings.volume;
     }
 }
