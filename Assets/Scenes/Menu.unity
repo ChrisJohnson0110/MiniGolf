@@ -385,6 +385,22 @@ PrefabInstance:
       propertyPath: homeMenu
       value: 
       objectReference: {fileID: 1220552155}
+    - target: {fileID: 4745214652004219098, guid: 2652a4be9e85de044b898514025895e8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.544551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745214652004219098, guid: 2652a4be9e85de044b898514025895e8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745214652004219098, guid: 2652a4be9e85de044b898514025895e8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.41451585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745214652686369074, guid: 2652a4be9e85de044b898514025895e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4745214652833230770, guid: 2652a4be9e85de044b898514025895e8, type: 3}
       propertyPath: m_Name
       value: Persistant UI
