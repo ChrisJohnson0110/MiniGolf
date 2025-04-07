@@ -33,8 +33,6 @@ public class MatchMakingWithLobby : MonoBehaviour
         await Authenticate();
 
         _connectedLobby = await QuickJoinLobby() ?? await CreateLobby();
-
-        if (_connectedLobby != null) _buttons.SetActive(false);
     }
 
     private async Task Authenticate()
