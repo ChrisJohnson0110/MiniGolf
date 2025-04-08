@@ -11,8 +11,8 @@ public class SwingAligner : MonoBehaviour
     {
         // Keep aligner at ball's position
         Vector3 pos = ballTransform.position;
-        pos.y = transform.position.y; // Keep original Y height
-        //pos.y = ballTransform.position.y + 0.5f;
+        //pos.y = transform.position.y; 
+        pos.y = ballTransform.position.y + 0.5f;
         transform.position = pos;
 
         // Handle input

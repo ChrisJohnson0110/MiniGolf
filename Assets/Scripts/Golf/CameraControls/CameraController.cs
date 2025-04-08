@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // or whatever your toggle key is
+        if (Input.GetKeyDown(toggleFreeFlyKey))
         {
             isFreeFly = !isFreeFly;
             IsInFreeCam = isFreeFly;
