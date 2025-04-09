@@ -1126,6 +1126,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.599
       objectReference: {fileID: 0}
+    - target: {fileID: -2863136542320469377, guid: f8e9193acf466254781fcc8851478cd3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f8e9193acf466254781fcc8851478cd3, type: 3}
       propertyPath: m_Name
       value: club-blue
@@ -1159,6 +1163,7 @@ MonoBehaviour:
   aligner: {fileID: 2057230552}
   clubOffset: -0.5
   animator: {fileID: 646287844}
+  clubRenderer: {fileID: 1198867665}
 --- !u!95 &646287844
 Animator:
   serializedVersion: 5
@@ -1692,6 +1697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f143f6a192e20d64d8f755e5f7aa0c3c, type: 3}
+--- !u!23 &1198867665 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -2863136542320469377, guid: f8e9193acf466254781fcc8851478cd3, type: 3}
+  m_PrefabInstance: {fileID: 646287840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1328017999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,7 +2970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friction: 0.98
-  stopThreshold: 0.05
+  stopThreshold: 0.01
   collisionDampFactor: 0.6
 --- !u!135 &7677957229352398154
 SphereCollider:

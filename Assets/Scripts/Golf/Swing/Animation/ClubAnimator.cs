@@ -9,6 +9,7 @@ public class ClubAnimator : MonoBehaviour
     public SwingAligner aligner;
     public float clubOffset = -0.5f;
     public Animator animator;
+    public MeshRenderer clubRenderer;
 
     private bool isVisible = true;
 
@@ -45,6 +46,6 @@ public class ClubAnimator : MonoBehaviour
 
     public void ResetClubPosition()
     {
-        AlignClubWithShot(); // reuse existing positioning logic
+        AlignClubWithShot();
     }
 }

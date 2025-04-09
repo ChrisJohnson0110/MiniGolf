@@ -21,7 +21,11 @@ public class SwingController : MonoBehaviour
             canSwing = false;
             clubAnimator.PlaySwing();
             StartCoroutine(SwingAfterDelay());
+            // Optional: wait until ball stops, then reset
+            StartCoroutine(WaitForBallToStop());
         }
+
+
     }
 
     bool IsBallMoving()
@@ -33,16 +37,13 @@ public class SwingController : MonoBehaviour
     {
         yield return new WaitForSeconds(swingDelay);
 
+        clubAnimator.HideClub();
+
         Vector3 direction = aligner.GetShotDirection();
         direction.y = 0; // Flatten Y to prevent ball from popping up
         direction.Normalize();
         float power = powerController.CurrentPower;
-        golfBall.AddForce(direction * power, ForceMode.Impulse);
-
-        clubAnimator.HideClub();
-
-        // Optional: wait until ball stops, then reset
-        StartCoroutine(WaitForBallToStop());
+        golfBall.AddForce(direction * power , ForceMode.Impulse);
     }
 
     IEnumerator WaitForBallToStop()
